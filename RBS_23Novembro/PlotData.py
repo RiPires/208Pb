@@ -27,7 +27,9 @@ def VdG_Plot(File, dataLabel):
     #print(aux)
     for i in range(len(aux)):
         for k in range(8):
-            ch.append(int(8*(i)+k+1)) ## axes in channel
+            #ch.append(int(8*(i)+k+1)) ## axes in channel
+            #ch.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV for ALFAS
+            ch.append((int(8*(i)+k+1))*2.4082+42.288) ## axes in keV for PROTONS
             y.append(float(aux[i][k]))
     
     fig, ax = plt.subplots()
@@ -36,8 +38,8 @@ def VdG_Plot(File, dataLabel):
     legend = ax.legend(loc="upper right",ncol=2, shadow=False,fancybox=True,framealpha = 0.0,fontsize=20)
     legend.get_frame().set_facecolor('#DAEBF2')
     tick_params(axis='both', which='major', labelsize=22)
-    #xlabel('Energy (keV)',fontsize=22)
-    xlabel('Channel',fontsize=22)   
+    xlabel('Energy (keV)',fontsize=22)
+    #xlabel('Channel',fontsize=22)   
     ylabel('Yield', fontsize=22)
     grid()
     show()
@@ -69,7 +71,8 @@ def VdG_PlotBoth(File1, File2):
     #print(aux)
     for i in range(len(aux)):
         for k in range(8):
-            ch1.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV
+            #ch1.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV for ALFAS
+            ch1.append((int(8*(i)+k+1))*2.4082+42.288) ## axes in keV for PROTONS
             y1.append(float(aux[i][k]))
 
     ## Creates channel yield lists for File2 and
@@ -85,7 +88,8 @@ def VdG_PlotBoth(File1, File2):
     #print(aux)
     for i in range(len(aux)):
         for k in range(8):
-            ch2.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV
+            #ch1.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV for ALFAS
+            ch1.append((int(8*(i)+k+1))*2.4082+42.288) ## axes in keV for PROTONS
             y2.append(float(aux[i][k]))
     
     fig, ax = plt.subplots()
@@ -137,3 +141,12 @@ VdG_Plot('1122/protoes/RBS1run18.dat', 'target 1 - 23 mm') ## Target 1 - large h
 VdG_Plot('1122/protoes/RBS1run19.dat', 'target 1 - 21 mm') ## Target 1 - large hole
 VdG_Plot('1122/protoes/RBS1run20.dat', 'target 1 - 25 mm') ## Target 1 - large hole
 VdG_Plot('1122/protoes/RBS1run21.dat', 'target 1 - 27 mm') ## Target 1 - large hole
+
+VdG_Plot('1122/protoes/RBS1run22.dat', 'target 2 - 44 mm') ## Target 2 - formvar
+VdG_Plot('1122/protoes/RBS1run23.dat', 'target 2 - 46 mm') ## Target 2 - formvar
+
+VdG_Plot('1122/protoes/RBS1run24.dat', 'target 3 - 55 mm') ## Target 3 - small hole
+VdG_Plot('1122/protoes/RBS1run25.dat', 'target 3 - 57 mm') ## Target 3 - small hole
+
+VdG_Plot('1122/protoes/RBS1run26.dat', 'target 4 - 66 mm') ## Target 4 - small hole
+VdG_Plot('1122/protoes/RBS1run27.dat', 'target 4 - 65 mm') ## Target 4 - small hole
