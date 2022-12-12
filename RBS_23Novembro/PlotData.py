@@ -109,14 +109,26 @@ def VdG_PlotBoth(File1, File2):
 
 ###                 Plots                     ###
 
-"""
+
 ###############   ALFAS   ###############
+
 VdG_Plot('1122/alfas/RBS1run_1.dat', 'Calib Ta-V-Nb') # Calibration V-Ta-Nb    
 
-VdG_Plot('1122/alfas/RBS1run2.dat', 'target 1 - 21 mm') ## Target 1 - large hole
-VdG_Plot('1122/alfas/RBS1run3.dat', 'target 1 - 23 mm') ## Target 1 - large hole
+VdG_Plot('1122/alfas/RBS1run2.dat', 'RSB1: target 1 - 21 mm') ## Target 1 - large hole
+VdG_Plot('1122/alfas/RBS2run2.dat', 'RBS2: target 1 - 21 mm') ## Target 1 - large hole
+VdG_Plot('1122/alfas/ERDrun2.dat', 'ERD: target 1 - 21 mm') ## Target 1 - large hole
+
+
+VdG_Plot('1122/alfas/RBS1run3.dat', 'RBS1: target 1 - 23 mm') ## Target 1 - large hole
+VdG_Plot('1122/alfas/RBS2run3.dat', 'RBS2: target 1 - 23 mm') ## Target 1 - large hole
+VdG_Plot('1122/alfas/ERDrun3.dat', 'ERD: target 1 - 23 mm') ## Target 1 - large hole
+
+
 VdG_Plot('1122/alfas/RBS1run4.dat', 'target 1 - 25 mm') ## Target 1 - large hole
-VdG_Plot('1122/alfas/RBS1run5.dat', 'target 1 - 27 mm') ## Target 1 - large hole
+
+VdG_Plot('1122/alfas/RBS1run5.dat', 'RBS1: target 1 - 27 mm') ## Target 1 - large hole
+VdG_Plot('1122/alfas/RBS2run5.dat', 'RBS2: target 1 - 27 mm') ## Target 1 - large hole
+VdG_Plot('1122/alfas/ERDrun5.dat', 'ERD: target 1 - 27 mm') ## Target 1 - large hole
 
 VdG_Plot('1122/alfas/RBS1run8.dat', 'target 2 - 44 mm') ## Target 2 - formvar
 VdG_Plot('1122/alfas/RBS1run09.dat', 'target 2 - 46 mm') ## Target 2 - formvar
@@ -128,11 +140,14 @@ VdG_Plot('1122/alfas/RBS1run12.dat', 'target 4 - 66 mm') ## Target 4 - small hol
 VdG_Plot('1122/alfas/RBS1run14.dat', 'target 4 - 65 mm') ## Target 4 - small hole
 
 #################################################
+
+VdG_PlotBoth('1122/alfas/RBS1run2.dat', '1122/alfas/RBS2run2.dat')
 VdG_PlotBoth('1122/alfas/RBS1run10.dat', '1122/alfas/RBS1run11.dat')
 VdG_PlotBoth('1122/alfas/ERDrun10.dat', '1122/alfas/ERDrun11.dat')
 VdG_PlotBoth('1122/alfas/RBS2run10.dat', '1122/alfas/RBS2run11.dat')
-"""
 
+
+"""
 ###############   PROTOES   ###############
 VdG_Plot('1122/protoes/RBS1run16.dat', 'Calib Ta-V-Nb') # Calibration V-Ta-Nb    
 
@@ -150,3 +165,4 @@ VdG_Plot('1122/protoes/RBS1run25.dat', 'target 3 - 57 mm') ## Target 3 - small h
 
 VdG_Plot('1122/protoes/RBS1run26.dat', 'target 4 - 66 mm') ## Target 4 - small hole
 VdG_Plot('1122/protoes/RBS1run27.dat', 'target 4 - 65 mm') ## Target 4 - small hole
+"""
