@@ -24,12 +24,11 @@ def VdG_Plot(File, dataLabel):
     aux = []
     for i in range(128):
         aux.append(data[i][0].split())
-    #print(aux)
     for i in range(len(aux)):
         for k in range(8):
-            #ch.append(int(8*(i)+k+1)) ## axes in channel
-            #ch.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV for ALFAS
-            ch.append((int(8*(i)+k+1))*2.4082+42.288) ## axes in keV for PROTONS
+            ch.append(int(8*(i)+k+1)) ## axes in channel
+            #ch.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV for ALFAS w/ RBS1
+            #ch.append((int(8*(i)+k+1))*2.4082+42.288) ## axes in keV for PROTONS w/ RBS1
             y.append(float(aux[i][k]))
     
     fig, ax = plt.subplots()
@@ -38,8 +37,8 @@ def VdG_Plot(File, dataLabel):
     legend = ax.legend(loc="upper right",ncol=2, shadow=False,fancybox=True,framealpha = 0.0,fontsize=20)
     legend.get_frame().set_facecolor('#DAEBF2')
     tick_params(axis='both', which='major', labelsize=22)
-    xlabel('Energy (keV)',fontsize=22)
-    #xlabel('Channel',fontsize=22)   
+    #xlabel('Energy (keV)',fontsize=22)
+    xlabel('Channel',fontsize=22)   
     ylabel('Yield', fontsize=22)
     grid()
     show()

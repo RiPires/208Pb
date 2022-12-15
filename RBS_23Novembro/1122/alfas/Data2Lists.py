@@ -2,6 +2,8 @@
 import csv
 import sys
 
+##########################################################################
+#####****************************************************************#####
 def VdG_dat2List(File):
     """
     Converts .dat files from VdG RBS into yield list
@@ -27,6 +29,11 @@ def VdG_dat2List(File):
             y.append(float(aux[i][k]))
     
     return y, ch
+#####****************************************************************#####
+##########################################################################
+
+
+
 
 def VdG_dat2Lists(File):
     """
@@ -54,6 +61,8 @@ def VdG_dat2Lists(File):
     
     return y, ch
 
+
+
 def VdG_dat2SIMNRAfile(File):
     """
     Converts .dat files from VdG RBS into yield single list file to be read with SIMNRA
@@ -80,6 +89,9 @@ def VdG_dat2SIMNRAfile(File):
     Output.close()
     
     return 'Done'
+
+
+    
 
 def VdG_dat2file(File):
     """
