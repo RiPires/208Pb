@@ -70,8 +70,9 @@ def VdG_PlotBoth(File1, File2):
     #print(aux)
     for i in range(len(aux)):
         for k in range(8):
-            #ch1.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV for ALFAS
-            ch1.append((int(8*(i)+k+1))*2.4082+42.288) ## axes in keV for PROTONS
+            ch1.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV for ALFAS
+            #ch1.append((int(8*(i)+k+1))*2.4082+42.288) ## axes in keV for PROTONS
+            #ch1.append(int(8*i+k+1)) ## Axes in channel
             y1.append(float(aux[i][k]))
 
     ## Creates channel yield lists for File2 and
@@ -87,19 +88,21 @@ def VdG_PlotBoth(File1, File2):
     #print(aux)
     for i in range(len(aux)):
         for k in range(8):
-            #ch1.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV for ALFAS
-            ch1.append((int(8*(i)+k+1))*2.4082+42.288) ## axes in keV for PROTONS
+            ch2.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV for ALFAS
+            #ch2.append((int(8*(i)+k+1))*2.4082+42.288) ## axes in keV for PROTONS
+            #ch2.append(int(8*i+k+1)) ## Axes in channel
             y2.append(float(aux[i][k]))
     
     fig, ax = plt.subplots()
-    #ax.plot(ch1,y1,'.', color ='xkcd:blue', label=(str(File1)))
-    #ax.plot(ch2,y2,'+', color ='xkcd:red', label=(str(File2)))
-    ax.semilogy(ch1,y1,'.', color ='xkcd:blue', label=(str(File1)))
-    ax.semilogy(ch2,y2,'+', color ='xkcd:red', label=(str(File2)))
-    legend = ax.legend(loc="upper right",ncol=1, shadow=False,fancybox=True,framealpha = 0.0,fontsize=20)
+    ax.plot(ch1,y1,'.', color ='xkcd:blue', label=(str(File1)))
+    ax.plot(ch2,y2,'+', color ='xkcd:red', label=(str(File2)))
+    #ax.semilogy(ch1,y1,'.', color ='xkcd:blue', label=(str(File1)))
+    #ax.semilogy(ch2,y2,'+', color ='xkcd:red', label=(str(File2)))
+    legend = ax.legend(loc="upper left",ncol=1, shadow=False,fancybox=True,framealpha = 0.0,fontsize=20)
     legend.get_frame().set_facecolor('#DAEBF2')
     tick_params(axis='both', which='major', labelsize=22)
     xlabel('Energy (keV)',fontsize=22)
+    #xlabel('Channel',fontsize=22)
     ylabel('Yield', fontsize=22)
     grid()
     show()
@@ -110,8 +113,8 @@ def VdG_PlotBoth(File1, File2):
 
 
 ###############   ALFAS   ###############
-
-VdG_Plot('1122/alfas/RBS1run_1.dat', 'Calib Ta-V-Nb') # Calibration V-Ta-Nb    
+VdG_Plot('1122/alfas/RBS1run_1.dat', 'Calib Ta-V-Nb') # Calibration V-Ta-Nb  
+""" 
 
 VdG_Plot('1122/alfas/RBS1run2.dat', 'RSB1: target 1 - 21 mm') ## Target 1 - large hole
 VdG_Plot('1122/alfas/RBS2run2.dat', 'RBS2: target 1 - 21 mm') ## Target 1 - large hole
@@ -137,13 +140,16 @@ VdG_Plot('1122/alfas/RBS1run11.dat', 'target 3 - 57 mm') ## Target 3 - small hol
 
 VdG_Plot('1122/alfas/RBS1run12.dat', 'target 4 - 66 mm') ## Target 4 - small hole
 VdG_Plot('1122/alfas/RBS1run14.dat', 'target 4 - 65 mm') ## Target 4 - small hole
-
+"""
 #################################################
 
-VdG_PlotBoth('1122/alfas/RBS1run2.dat', '1122/alfas/RBS2run2.dat')
-VdG_PlotBoth('1122/alfas/RBS1run10.dat', '1122/alfas/RBS1run11.dat')
-VdG_PlotBoth('1122/alfas/ERDrun10.dat', '1122/alfas/ERDrun11.dat')
-VdG_PlotBoth('1122/alfas/RBS2run10.dat', '1122/alfas/RBS2run11.dat')
+#VdG_PlotBoth('1122/alfas/RBS1run2.dat', '1122/alfas/RBS2run2.dat')
+#VdG_PlotBoth('1122/alfas/RBS1run10.dat', '1122/alfas/RBS1run11.dat')
+#VdG_PlotBoth('1122/alfas/ERDrun10.dat', '1122/alfas/ERDrun11.dat')
+#VdG_PlotBoth('1122/alfas/RBS2run10.dat', '1122/alfas/RBS2run11.dat')
+
+VdG_PlotBoth('1122/protoes/RBS1run24.dat', '1122/protoes/RBS1run25.dat')
+
 
 
 """
