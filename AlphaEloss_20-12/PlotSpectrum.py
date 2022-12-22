@@ -3,42 +3,11 @@ from matplotlib.pylab import *
 import matplotlib.pyplot as plt
 import csv
 
-def PlotData(File):
-
-    with open(File, 'r') as file:
-        reader = csv.reader(file, delimiter="\n", skipinitialspace=True)
-        data = list(reader)
-    
-    energy = []
-    counts = []
-    aux = []
-    
-    for i in range(2,len(data)): ## 2 is the third line
-        aux.append(data[i][0].split())
-    for i in range(len(aux)):
-        energy.append(float(aux[i][0]))
-        counts.append(float(aux[i][1]))
-
-    fig, ax = plt.subplots()
-    ax.plot(energy,counts,'-', color ='xkcd:red', label=(str(File)))
-    legend = ax.legend(loc="upper right",ncol=1, shadow=True,fancybox=True,framealpha = 0.0,fontsize=20)
-    legend.get_frame().set_facecolor('#DAEBF2')
-    tick_params(axis='both', which='major', labelsize=22)
-    xlabel('Energy',fontsize=22)
-    ylabel('Yield', fontsize=22)
-    show()
-
-#Energy in detector
-
-# Source calibration
-#PlotData("Edet.csv")
-
-
 def NormalizeInRnage(data):
     """
     Finds the max. value in a specific range
-    and Normalizes a list to it 
-    returns a new list 
+    and Normalizes a list to it; 
+    Returns a new list 
     """
     new_data = []
     for i in range(100, len(data)):
@@ -52,6 +21,9 @@ def NormalizeInRnage(data):
 
 ##   Plots both spectrums from data and simulation   ###############################
 def PlotBoth(dataFile, simuFile):
+    """
+    Plots both experimental and simulation data
+    """
 
     ### opens data file and fills lists   ###
     with open(dataFile, 'r') as fileData:
@@ -98,7 +70,12 @@ def PlotBoth(dataFile, simuFile):
 ########################################################################
 
 #PlotBoth('Data/Ra226-Calib.mca', 'alfaMC_filme_Calib/Edet.csv')
-PlotBoth('Data/Ra226-A2.mca', 'alfaMC_filme_Pb/Edet.csv')
-PlotBoth('Data/Ra226-B2.mca', 'Edet_1100nm.csv')
-PlotBoth('Data/Ra226-C1_after.mca', 'Edet_1650nm.csv')
+PlotBoth('Data/Ra226-A3.mca', 'alfaMC_filme_Pb/Edet.csv')
+
+PlotBoth('Data/Ra226-A3.mca', '1000nm.csv')
+PlotBoth('Data/Ra226-C2.mca', '600nm.csv')
+PlotBoth('Data/Ra226-A1.mca', '400nm.csv')
+PlotBoth('Data/Ra226-A2.mca', '1200nm.csv')
+PlotBoth('Data/Ra226-B2.mca', '1100nm.csv')
+PlotBoth('Data/Ra226-C1_after.mca', '1650nm.csv')
 PlotBoth('Data/Ra226-Calib.mca', 'Edet_Calib.csv')

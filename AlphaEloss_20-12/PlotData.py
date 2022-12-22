@@ -36,6 +36,13 @@ def PlotData(File):
     grid()
     show()
 
+PlotData('Data/Ra226-C1_stat.mca')
+PlotData('Data/Ra226-A1.mca')
+PlotData('Data/Ra226-C2.mca')
+PlotData('Data/Ra226-A3.mca')
+
+
+
 
 PlotData('Data/Ra226-Calib.mca')
 PlotData('Data/Ra226-C1.mca')

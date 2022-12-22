@@ -15,7 +15,7 @@
 
         ! cylindrical target/film
           real*8, parameter :: rtar=1.d0    ! radius
-          real*8, parameter :: htar=1200.d-7  ! thickness (nm.d-7)
+          real*8, parameter :: htar=1000.d-7  ! thickness (nm.d-7)
           real*8, parameter :: zwtar=8.0     ! z of target entrance
           real*8, parameter :: xtar=0.      ! x,y,z of target center
           real*8, parameter :: ytar=0. 
