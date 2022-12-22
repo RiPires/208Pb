@@ -36,7 +36,11 @@ def PlotData(File):
     grid()
     show()
 
-#PlotData('AlphaEloss_11-11/Ra226_Calib.mca')
-#PlotData('AlphaEloss_11-11/Ra226_BigHole.mca')
-#PlotData('AlphaEloss_11-11/Ra226_SmallHole.mca')
-PlotData('AlphaEloss_11-11/Ra226_Formvar.mca')
+
+PlotData('Data/Ra226-Calib.mca')
+PlotData('Data/Ra226-C1.mca')
+PlotData('Data/Ra226-C1_after.mca')
+PlotData('Data/Ra226-B2.mca')
+PlotData('Data/Ra226-A2.mca')
+
+

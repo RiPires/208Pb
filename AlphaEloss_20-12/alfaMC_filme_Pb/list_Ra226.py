@@ -14,6 +14,6 @@ for i in range(len(aux)):
     counts.append(int(aux[i][0]))
 
 for i in range(len(counts)):
-    Output.write("{:.3f}".format((0.004479*(i+1)-0.00168))+'\t'+str(counts[i])+'\n')
+    Output.write("{:.3f}".format((0.004472*(i+1)-0.00))+'\t'+str(counts[i])+'\n') ## check calibration
 
 Output.close()

@@ -87,7 +87,7 @@ def PlotBoth(dataFile, simuFile):
     fig, ax = plt.subplots()
     ax.plot(data_Energy,data_Counts,'.', color ='xkcd:black', label=(str(dataFile)))
     ax.plot(simu_Energy,simu_Counts,'-', color ='xkcd:red', label=(str(simuFile)))
-    legend = ax.legend(loc="upper right",ncol=1, shadow=True,fancybox=True,framealpha = 0.0,fontsize=20)
+    legend = ax.legend(loc="upper right",ncol=1, shadow=False,fancybox=True,framealpha = 0.0,fontsize=20)
     legend.get_frame().set_facecolor('#DAEBF2')
     tick_params(axis='both', which='major', labelsize=22)
     xlabel('Energy [MeV]',fontsize=22)
@@ -97,6 +97,8 @@ def PlotBoth(dataFile, simuFile):
     return
 ########################################################################
 
-PlotBoth('AlphaEloss_11-11/Ra226_Calib.mca', 'Edet_Calib.csv')
-PlotBoth('AlphaEloss_11-11/Ra226_BigHole.mca', 'Edet_560nm.csv')
-PlotBoth('AlphaEloss_11-11/Ra226_SmallHole.mca', 'Edet_560nm.csv')
+#PlotBoth('Data/Ra226-Calib.mca', 'alfaMC_filme_Calib/Edet.csv')
+PlotBoth('Data/Ra226-A2.mca', 'alfaMC_filme_Pb/Edet.csv')
+PlotBoth('Data/Ra226-B2.mca', 'Edet_1100nm.csv')
+PlotBoth('Data/Ra226-C1_after.mca', 'Edet_1650nm.csv')
+PlotBoth('Data/Ra226-Calib.mca', 'Edet_Calib.csv')
