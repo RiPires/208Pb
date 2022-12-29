@@ -36,18 +36,22 @@ def PlotData(File):
     grid()
     show()
 
-PlotData('Data/Ra226-C1_stat.mca')
-PlotData('Data/Ra226-A1.mca')
-PlotData('Data/Ra226-C2.mca')
-PlotData('Data/Ra226-A3.mca')
+    return
 
 
+PlotData('Data/Ra226_Calib_27-12.mca')
+PlotData('Data/Ra226_D1.mca')
+PlotData('Data/Ra226_E1.mca')
 
 
-PlotData('Data/Ra226-Calib.mca')
+PlotData('Data/Ra226-Calib_20-12.mca')
 PlotData('Data/Ra226-C1.mca')
 PlotData('Data/Ra226-C1_after.mca')
 PlotData('Data/Ra226-B2.mca')
 PlotData('Data/Ra226-A2.mca')
+PlotData('Data/Ra226-C1_stat.mca')
+PlotData('Data/Ra226-A1.mca')
+PlotData('Data/Ra226-C2.mca')
+PlotData('Data/Ra226-A3.mca')
 
 
