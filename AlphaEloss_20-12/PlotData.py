@@ -39,6 +39,11 @@ def PlotData(File):
     return
 
 
+PlotData('Data/Ra226_Calib_29-12.mca')
+PlotData('Data/Ra226_E2.mca')
+PlotData('Data/Ra226_F1.mca')
+
+
 PlotData('Data/Ra226_Calib_27-12.mca')
 PlotData('Data/Ra226_D1.mca')
 PlotData('Data/Ra226_E1.mca')
