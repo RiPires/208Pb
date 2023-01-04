@@ -72,10 +72,11 @@ def PlotBoth(dataFile, simuFile):
 #PlotBoth('Data/Ra226-Calib.mca', 'alfaMC_filme_Calib/Edet.csv')
 PlotBoth('Data/Ra226-A3.mca', 'alfaMC_filme_Pb/Edet.csv')
 
-PlotBoth('Data/Ra226-A3.mca', '1000nm.csv')
-PlotBoth('Data/Ra226-C2.mca', '600nm.csv')
 PlotBoth('Data/Ra226-A1.mca', '400nm.csv')
-PlotBoth('Data/Ra226-A2.mca', '1200nm.csv')
+PlotBoth('Data/Ra226-C2.mca', '600nm.csv')
+PlotBoth('Data/Ra226-A3.mca', '1000nm.csv')
 PlotBoth('Data/Ra226-B2.mca', '1100nm.csv')
+PlotBoth('Data/Ra226-A2.mca', '1200nm.csv')
 PlotBoth('Data/Ra226-C1_after.mca', '1650nm.csv')
-PlotBoth('Data/Ra226-Calib.mca', 'Edet_Calib.csv')
+PlotBoth('Data/Ra226-Calib_20-12.mca', 'Edet_Calib.csv')
+###################################

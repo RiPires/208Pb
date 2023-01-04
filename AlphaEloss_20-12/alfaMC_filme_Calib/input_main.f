@@ -61,7 +61,7 @@
           integer*4 :: npeak                  ! no. of peaks/bins (isrce=2,3)
           real*8,dimension(:), allocatable :: Esrc    ! energy array (peak/spectrum) in keV
           real*8,dimension(:), allocatable :: Psrc    ! peak/spectrum intensity array
-          character*64      :: src_file='Ra226_Calibrated.in' ! peak/spectrum file name
+          character*64      :: src_file='Ra226_20-12_Calibrated.in' ! peak/spectrum file name CHECK FOR CORRECT CALIBRATION
           integer           :: idsrc          ! mc generator spectrum id
         save
         end module source_mod 

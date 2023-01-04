@@ -1,6 +1,5 @@
 #coding:utf8
 
-from cmath import sqrt
 from matplotlib.pylab import *
 import matplotlib.pyplot as plt
 import numpy as np
@@ -61,7 +60,7 @@ def Resolucao(R, sqrtE):
     #      'intercept=',"{:.4f}".format(intercept),'\n',
     #      'R² = ', "{:.5f}".format(r_value**2),'\n',
     #      'std_Err = ',"{:.4f}".format(std_err),'\n')
-    print('R = ',"{:.6f}".format(slope),' * 1/sqrt(E) +',"{:.6f}".format(intercept))
+    print('R = ',"{:.6f}".format(slope),' * 1/np.sqrt(E) +',"{:.6f}".format(intercept))
     print()
     #print('############################# \n')
 
@@ -130,59 +129,32 @@ def Resolucao_C_erros(R, sqrtE, dR):
     return'-------------------------'
 ###   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   ###
 
+##   Input for energy calibration !! 20 Dez. !! in MeV   ##
 
-##   Input for energy calibration   in MeV   ##
-Energies = [7.68682,
-6.00230,
-5.48952,
-5.30438,
-4.78434
-]
+Energies = [7.68682, 6.00230, 5.48952, 5.30438, 4.78434]
+Channels = [1719., 1343., 1227., 1186., 1070.]
+Sigmas = [2.85510, 2.60492, 2.25344, 2.47031, 2.35025]
 
-Channels = [1719.,
-1343.,
-1229.,
-1187.,
-1071.
-
-]
-
-Sigmas = [3.11419686,
-2.940055337,
-2.147217785,
-2.008661799,
-2.065492867
-]
-
-print('Calibração:')
+print('Calibration 20 Dez.:')
 Calibracao(Energies, Channels, Sigmas)
+###########################################################
 
+##   Input for energy calibration !! 27 Dez. !! in MeV   ##
 
+Energies = [7.68682, 6.00230, 5.48952, 5.30438, 4.78434]
+Channels = [1712., 1337., 1223., 1181., 1066.]
+Sigmas = [2.79761, 1.95953, 1.99854, 2.28614, 2.20823]
 
-##   Input for resolution parameters  in MeV  ##
-OneOver_sqrtE = [0.360684,
-0.408170,
-0.426808,
-0.434193,
-0.457182
-]
+print('Calibration 27 Dez.:')
+Calibracao(Energies, Channels, Sigmas)
+###########################################################
 
-Res = [0.0016603,
-0.0019399,
-0.0018349,
-0.0020817,
-0.0021958
-]
+##   Input for energy calibration !! 29 Dez. !! in MeV   ##
 
+Energies = [7.68682, 6.00230, 5.48952, 5.30438, 4.78434]
+Channels = [1719., 1343., 1229., 1187., 1071.]
+Sigmas = [3.11420, 2.94006, 2.14722, 2.00866, 2.06549]
 
-SigmasR = [0.004729647,
-0.006055835,
-0.006619722,
-0.006851916,
-0.007595992
-]
-
-print('Resolução:')
-Resolucao(Res, OneOver_sqrtE)
-print('Resolução c/ erros:')
-Resolucao_C_erros(Res, OneOver_sqrtE, SigmasR)
+print('Calibration 29 Dez.:')
+Calibracao(Energies, Channels, Sigmas)
+###########################################################

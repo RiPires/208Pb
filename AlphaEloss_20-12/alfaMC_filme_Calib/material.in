@@ -1,4 +1,4 @@
 0.vacuum.mat  ! chamber
-0.vacuum.mat  ! film material - vaccum for calibration
+0.vacuum.mat  ! film material - VACUUM FOR CALIBRATION
 0.au.mat      ! detector window Au
 0.si.mat      ! detector Si
