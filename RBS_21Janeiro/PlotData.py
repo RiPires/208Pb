@@ -45,6 +45,48 @@ def VdG_Plot(File, dataLabel):
 #############################################
 #############################################
 
+#############################################
+###   Plot RBS .dat funntion definition   ###
+#############################################
+def VdG_Plot_logy(File, dataLabel):
+    """
+    Converts .dat files from VdG RBS into yield and channel lists
+    INPUTS:
+        "FILENAME.dat"
+    OUTPUTS:
+        Yield and Channel lists
+    HOW TO USE:
+        MyYield, MyChannel = VdG_dat2Lists("MyFile.mca")
+    """
+    with open(File, 'r') as file:
+        reader = csv.reader(file, delimiter="\n", skipinitialspace=True)
+        data = list(reader)
+    ch = []
+    y = []
+    aux = []
+    for i in range(128):
+        aux.append(data[i][0].split())
+    for i in range(len(aux)):
+        for k in range(8):
+            ch.append(int(8*(i)+k+1)) ## axes in channel
+            #ch.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV for ALFAS w/ RBS1
+            #ch.append((int(8*(i)+k+1))*2.4082+42.288) ## axes in keV for PROTONS w/ RBS1
+            y.append(float(aux[i][k]))
+    
+    fig, ax = plt.subplots()
+    #ax.plot(ch,y,'.', color ='xkcd:black', label=(str(dataLabel)))
+    ax.semilogy(ch,y,'.', color ='xkcd:purple', label=(str(dataLabel)))
+    legend = ax.legend(loc="upper right",ncol=2, shadow=False,fancybox=True,framealpha = 0.0,fontsize=20)
+    legend.get_frame().set_facecolor('#DAEBF2')
+    tick_params(axis='both', which='major', labelsize=22)
+    #xlabel('Energy (keV)',fontsize=22)
+    xlabel('Channel',fontsize=22)   
+    ylabel('Yield', fontsize=22)
+    grid()
+    show()
+#############################################
+#############################################
+
 #######################################################
 ###   Plot two RBS .dat files funntion definition   ###
 #######################################################
@@ -112,7 +154,7 @@ def VdG_PlotBoth(File1, File2):
 ###                 Plots                     ###
 
 ###############   PROTOES   ###############
-
+"""
 VdG_Plot('0123/RBS1run01.dat', 'Calib Ta-V-Nb') # Calibration V-Ta-Nb
 VdG_Plot('0123/RBS1run02.dat', 'Calib Ta-V-Nb') # Calibration V-Ta-Nb    
 
@@ -124,6 +166,7 @@ VdG_Plot('0123/RBS1run06.dat', 'target 5 - 35 mm') # Target 5 - 1 dip
 
 VdG_Plot('0123/RBS1run07.dat', 'target 6 - 44 mm') # Target 6 - 2 dips
 VdG_Plot('0123/RBS1run08.dat', 'target 6 - 46 mm') # Target 6 - 2 dips
+"""
 
 VdG_Plot('0123/RBS1run09.dat', 'target 7 - 56 mm') # Target 7 - 3 dips
 VdG_Plot('0123/RBS1run10.dat', 'target 7 - 58 mm') # Target 7 - 3 dips
