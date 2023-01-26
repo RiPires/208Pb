@@ -70,8 +70,7 @@ def VdG_PlotBoth(File1, File2):
     #print(aux)
     for i in range(len(aux)):
         for k in range(8):
-            ch1.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV for ALFAS
-            #ch1.append((int(8*(i)+k+1))*2.4082+42.288) ## axes in keV for PROTONS
+            ch1.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV 
             #ch1.append(int(8*i+k+1)) ## Axes in channel
             y1.append(float(aux[i][k]))
 
@@ -140,14 +139,4 @@ VdG_Plot('0123/RBS1run17.dat', 'target E2 - 20 mm') # Target E2
 VdG_Plot('0123/RBS1run18.dat', 'target E2 - 20 mm - 180º') # Target E2 - 180º
 
 VdG_Plot('0123/RBS1run19.dat', 'Formvar - 44 mm') # Target Formvar
-VdG_Plot('0123/RBS1run20.dat', 'Formvar - 46 mm') # Target Formvar 
-
-
-
-
-
-
-
-
-
-
+VdG_Plot('0123/RBS1run20.dat', 'Formvar - 46 mm') # Target Formvar
