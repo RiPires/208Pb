@@ -58,7 +58,7 @@ def Calibracao(E, Ch, dCh):
 def Calib_Wout_Uncer(BackEnergy, SurfaceChannel):
 
     slope, intercept, r_value, p_value, std_err = stats.linregress(SurfaceChannel, BackEnergy)  
-    print('E [keV] = ',"{:.6f}".format(slope),' * Ch +',"{:.6f}".format(intercept))
+    print('E [MeV] = ',"{:.6f}".format(slope),' * Ch +',"{:.6f}".format(intercept))
     print()
     #print('############################# \n')
 
@@ -88,15 +88,14 @@ Energies = [1563.72,
 1957.01
 ]
 
-Channels = [650.,
-722.,
-768.,
+Channels = [643.,
+712.,
+761.,
 792.,
-809.
+808.
 ]
 
 Sigmas = [1.,
-1.,
 1.,
 1.,
 1.,
