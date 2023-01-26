@@ -112,8 +112,7 @@ def VdG_PlotBoth(File1, File2):
     #print(aux)
     for i in range(len(aux)):
         for k in range(8):
-            ch1.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV for ALFAS
-            #ch1.append((int(8*(i)+k+1))*2.4082+42.288) ## axes in keV for PROTONS
+            ch1.append((int(8*(i)+k+1))*2.3681+94.322) ## axes in keV 
             #ch1.append(int(8*i+k+1)) ## Axes in channel
             y1.append(float(aux[i][k]))
 
@@ -248,6 +247,9 @@ def VdG_Plot4(File1, File2, File3, File4):
     ax.semilogy(ch3,y3,'*', color ='xkcd:green', label=(str('2nd wash')))
     ax.semilogy(ch4,y4,'^', color ='xkcd:black', label=(str('3rd wash')))
 
+VdG_Plot('0123/RBS1run19.dat', 'Formvar - 44 mm') # Target Formvar
+VdG_Plot('0123/RBS1run20.dat', 'Formvar - 46 mm') # Target Formvar
+=======
     legend = ax.legend(loc="bottom center",ncol=1, shadow=False,fancybox=True,framealpha = 0.0,fontsize=20)
     legend.get_frame().set_facecolor('#DAEBF2')
     tick_params(axis='both', which='major', labelsize=22)
