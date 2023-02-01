@@ -261,7 +261,6 @@ VdG_Plot('0123/RBS1run20.dat', 'Formvar - 46 mm') # Target Formvar
 #############################################
 
 ###                 Plots                     ###
-"""
 ###############   PROTOES   ###############
 VdG_Plot_logy('0123/RBS1run01.dat', 'Calib Ta-V-Nb - 8 mm') # Calibration V-Ta-Nb
 VdG_Plot_logy('0123/RBS1run02.dat', 'Calib Ta-V-Nb - 9 mm') # Calibration V-Ta-Nb    
@@ -291,10 +290,3 @@ VdG_Plot_logy('0123/RBS1run18.dat', 'target E2 - 20 mm - 180º') # Target E2 - 1
 
 VdG_Plot_logy('0123/RBS1run19.dat', 'Formvar - 44 mm') # Target Formvar
 VdG_Plot_logy('0123/RBS1run20.dat', 'Formvar - 46 mm') # Target Formvar 
-"""
-
-VdG_Plot4('0123/RBS1run04.dat',
-'0123/RBS1run06.dat',
-'0123/RBS1run08.dat',
-'0123/RBS1run10.dat'
-)

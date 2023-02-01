@@ -8,7 +8,9 @@ def ch2energy(Channel, m, b):
     OUTPUTS:
     Energy list
     """
+    Energy = []
     for ch in Channel:
-        ch = ((8*int(ch)+k+1)*m+b)
+        energy = (int(ch)*m+b)
+        Energy.append(energy)
     
-    return Channel
+    return Energy

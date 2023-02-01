@@ -1,6 +1,5 @@
 #RiP
 import csv
-import sys
 
 def VdG_dat2List(File):
     """
