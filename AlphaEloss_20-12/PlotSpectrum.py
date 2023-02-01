@@ -69,6 +69,10 @@ def PlotBoth(dataFile, simuFile):
     return
 ########################################################################
 
+PlotBoth('Data/Ra226_E2.mca', '715nm.csv')
+PlotBoth('Data/Ra226_E2.mca', '750nm.csv')
+
+
 #PlotBoth('Data/Ra226-Calib.mca', 'alfaMC_filme_Calib/Edet.csv')
 PlotBoth('Data/Ra226-A3.mca', 'alfaMC_filme_Pb/Edet.csv')
 

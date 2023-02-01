@@ -15,7 +15,7 @@
 
         ! cylindrical target/film
           real*8, parameter :: rtar=1.d0    ! radius
-          real*8, parameter :: htar=1000.d-7  ! thickness (nm.d-7)
+          real*8, parameter :: htar=715.d-7  ! thickness (nm.d-7)
           real*8, parameter :: zwtar=8.0     ! z of target entrance
           real*8, parameter :: xtar=0.      ! x,y,z of target center
           real*8, parameter :: ytar=0. 
@@ -70,7 +70,7 @@
          integer*4 :: iscol=0 ! scattering -1: no scaterring, 0:Fermi, 1: Single collision
          integer*4 :: istra=0 ! straggling -1: no stragglig, 0: Gauss, 1: Gauss/Vavilov/Landau
 
-         integer*4 :: ntot= 1E6 ! Total number of events
+         integer*4 :: ntot= 1E7 ! Total number of events
          integer*4 :: ninfo=5E5 ! Information loop
 
          ! detector resolution R=sigma/E = FWHM/(2.355*E)
